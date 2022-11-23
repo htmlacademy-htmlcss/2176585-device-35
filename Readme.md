@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Ирина Шихалева](https://up.htmlacademy.ru/htmlcss/35/user/2176585).
-* Наставник: [Павел Позняк] (https://htmlacademy.ru/profile/id907403).
+* Наставник: [Павел Позняк] (https://up.htmlacademy.ru/htmlcss/35/user/907403).
 
 ---
 
