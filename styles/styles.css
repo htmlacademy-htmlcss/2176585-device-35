@@ -53,23 +53,42 @@ body {
   overflow: hidden;
 }
 
+.page-header {
+  padding-top: 40px;
+}
+
+.logo {
+  position: absolute;
+  top: -61px;
+  left: 60px;
+}
+
 .navigation {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.navigation-background {
+  padding-top: 41px;
+  background-color: #FFE17F;
   width: 1160px;
   margin: 0 auto;
-  background-color: #FFE17F;
-  color: #000000;
+  padding-bottom: 150px;
 }
 
 .navigation-services-list {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  margin: 0;
+  padding: 0;
   column-gap: 45px;
-  margin-left: 276px;
-  margin-right: 60px;
+  letter-spacing: 0.2em;
 }
 
 .footer-text-wrapper {
@@ -96,32 +115,115 @@ body {
 
 .navigation-list {
   display: flex;
-  column-gap: 61px;
+  flex-wrap: wrap;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-right: 60px;
 }
 
 .navigation-catalog {
   display: flex;
-  max-height: 50px;
-  margin-left: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.navigation-catalog-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-catalog-title {
+  margin: 0;
+  margin-right: 10px;
+  letter-spacing: 0.2em;
+}
+
+.catalog-open-btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.3;
+  border: 2px solid #000000;
+  margin-right: 285px;
+}
+
+.catalog-open-btn::before {
+  content: "+";
+  color: #000000;
+  font-size: 30px;
+}
+
+.item-slider-container {
+  width: 1160px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.slider-list {
+  margin: 0;
+}
+
+.slider-item {
+  display: flex;
+  margin: 0;
+  margin-top: -28px;
+}
+
+.slider-item-image {
+  margin-top: -115px;
+}
+
+.tagline {
+  margin: 0;
+  margin-bottom: 29px;
+}
+
+.tagline-description {
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.item-features-list {
+  display: flex;
+  margin: 0;
+  margin-top: 50px;
 }
 
 .search-form {
-  margin-left: 60px;
+  display: flex;
+  margin-right: 53px;
+}
+
+.login-link {
+  margin-right: 198px;
+}
+
+.compare-link {
+  margin-right: 61px;
 }
 
 .navigation-input {
   width:359px;
+  padding: 10px 0 10px 48px;
+  border: 2px solid #000000;
+  border-radius: 50px 0 0 50px;
+  box-sizing: border-box;
+  background-color: transparent;
 }
 
 .search-btn {
   width: 160px;
+  border: 2px solid #000000;
+  border-left: none;
+  border-radius: 0 50px 50px 0;
+  background-color: transparent;
+  padding: 10px 56px;
 }
 
 .page-container {
@@ -252,12 +354,16 @@ body {
   font-weight: 400;
   font-size: 36px;
   line-height: 30px;
+  margin: 0;
+  margin-bottom: 12px;
 }
 
 .feature-title {
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
+  margin: 0;
+  margin-right: 20px;
 }
 
 .item-group-name {
