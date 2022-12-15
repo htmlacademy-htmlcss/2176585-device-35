@@ -60,7 +60,6 @@ body {
 .logo {
   position: absolute;
   top: -61px;
-  left: 60px;
   cursor: pointer;
 }
 
@@ -82,7 +81,6 @@ body {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   margin-bottom: 30px;
   color: #000000;
@@ -145,12 +143,11 @@ body {
   right: 24px;
 }
 
-.navigation-background {
-  padding-top: 41px;
+.navigation-wrapper {
   background-color: #FFE17F;
-  width: 1160px;
+  width: 1040px;
   margin: 0 auto;
-  padding-bottom: 150px;
+  padding: 41px 60px 150px 60px;
   z-index: 0;
   position: relative;
 }
@@ -238,13 +235,27 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.navigation-list-index {
   gap: 61px;
+}
+
+.navigation-item-catalog:first-child {
+  margin-right: 28px;
+}
+
+.navigation-item-catalog:nth-child(2) {
+  margin-right: 48px;
+}
+
+.navigation-item-catalog:nth-child(3) {
+  margin-right: 61px;
 }
 
 .navigation-catalog {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   margin: 0;
 }
@@ -267,7 +278,7 @@ body {
   background: inherit;
   opacity: 0.3;
   border: 2px solid #000000;
-  margin-right: 285px;
+  margin-right: 280px;
 }
 
 .catalog-open-btn::before {
@@ -357,7 +368,7 @@ body {
 
 .search-form {
   display: flex;
-  margin-right: 53px;
+  margin-right: 50px;
   position: relative;
 }
 
@@ -922,6 +933,8 @@ body {
 
 .catalog-products {
   display: flex;
+  padding-left: 140px;
+  padding-right: 140px;
   background-color: #F0F0F0;
 }
 
@@ -941,10 +954,7 @@ body {
 }
 
 .inner-header {
-  width: 1440px;
-  padding-left: 200px;
-  padding-top: 35px;
-  padding-bottom: 34px;
+  padding: 35px 160px 34px 200px;
 }
 
 .inner-header-title {
