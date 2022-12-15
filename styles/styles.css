@@ -88,48 +88,60 @@ body {
   color: #000000;
 }
 
+.user-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 530px;
+}
+
 .navigation-login {
+  margin: 0;
+  margin-right: 198px;
+}
+
+.login-link {
   position: relative;
 }
 
-.navigation-login::before {
+.login-link::before {
   position: absolute;
   content: "";
   background-image: url(../images/user-icon.svg);
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  top: 9px;
+  top: 6px;
   right: 26px;
 }
 
-.navigation-compare {
+.compare-link {
   position: relative;
 }
 
-.navigation-compare::before {
+.compare-link::before {
   position: absolute;
   content: "";
   background-image: url(../images/compare-icon.svg);
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  top: 9px;
+  top: 5px;
   right: 22px;
 }
 
-.navigation-cart {
+.cart-link {
   position: relative;
 }
 
-.navigation-cart::before {
+.cart-link::before {
   position: absolute;
   content: "";
   background-image: url(../images/shopping-cart-icon.svg);
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  top: 8px;
+  top: 3px;
   right: 24px;
 }
 
@@ -151,6 +163,7 @@ body {
   padding: 0;
   column-gap: 45px;
   letter-spacing: 0.2em;
+  max-width: 500px;
 }
 
 .footer-text-wrapper {
@@ -180,10 +193,6 @@ body {
 }
 
 .footer-services-link {
-  letter-spacing: 0.2em;
-}
-
-.more-details-link {
   letter-spacing: 0.2em;
 }
 
@@ -229,6 +238,7 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+  gap: 61px;
 }
 
 .navigation-catalog {
@@ -288,33 +298,37 @@ body {
   margin-right: 40px;
 }
 
-.slider-more-details {
+.more-details-link {
+  letter-spacing: 0.2em;
   position: relative;
   margin-left: 40px;
-  width: 200px;
+  padding: 10px 17px;
+  display: inline-flex;
+  z-index: 1;
 }
 
-.slider-more-details::before {
+.more-details-link::before {
   content: "";
   position: absolute;
-  background-repeat: no-repeat;
-  width: 220px;
-  height: 8px;
-  top: 6px;
-  left: -40px;
+  width: 105%;
+  height: 100%;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(0.2);
   background-color: #FFE17F;
   z-index: -1;
 }
 
-.slider-more-details:hover::before {
-  height: 40px;
-  top: -8px;
+.more-details-link:hover::before {
+  transform: translate(-50%, -50%) scaleY(1);
   transition: all .1s ease-in-out;
 }
 
-.slider-more-details:active::before {
-  height: 40px;
-  top: -8px;
+.more-details-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.more-details-link:active::before {
   background-color: #FFCC33;
 }
 
@@ -345,14 +359,6 @@ body {
   display: flex;
   margin-right: 53px;
   position: relative;
-}
-
-.login-link {
-  margin-right: 198px;
-}
-
-.compare-link {
-  margin-right: 61px;
 }
 
 .navigation-input {
@@ -444,7 +450,7 @@ body {
   width: 1160px;
   margin: 0 auto;
   padding: 0;
-  margin-bottom: 158px;
+  margin-bottom: 70px;
   column-gap: 40px;
   list-style: none;
 }
@@ -458,14 +464,15 @@ body {
 .services-container {
   display: flex;
   justify-content: center;
-  background-color: #F0F0F0;
-  padding: 0 140px 72px 140px;
+  background: linear-gradient(transparent 0 102px, #F0F0F0 102px 289px);
+  padding: 72px 140px 72px 140px;
   margin-bottom: 70px;
   z-index: -1;
   position: relative;
 }
 
 .services-btn {
+  font-family: "Raleway";
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2em;
@@ -474,6 +481,7 @@ body {
   color: #000000;
   border: none;
   box-sizing: border-box;
+  text-transform: uppercase;
 }
 
 .services-btn-checked {
@@ -490,6 +498,9 @@ body {
 
 .services-btn-not-checked {
   position: relative;
+  padding: 10px 17px;
+  display: inline-flex;
+  z-index: 1;
 }
 
 .services-btn-not-checked::before {
@@ -503,13 +514,25 @@ body {
   z-index: -1;
 }
 
+.services-btn-not-checked:hover::before {
+  transition: all .1s ease-in-out;
+}
+
+.services-btn-not-checked:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.services-btn-not-checked:active::before {
+  background-color: #FFCC33;
+}
+
 .services-navigation {
   display: flex;
   flex-direction: column;
   width: 287px;
   row-gap: 35px;
   margin-right: 123px;
-  top: -40px;
+  top: -10px;
   position: relative;
 }
 
@@ -578,7 +601,6 @@ body {
   flex-direction: column;
   width: 694px;
   position: relative;
-  top: -30px;
 }
 
 .services-description-text {
@@ -681,6 +703,7 @@ body {
   line-height: 24px;
   letter-spacing: -0.02em;
   margin: 0;
+  margin-top: 32px;
 }
 
 .item-group-link {
@@ -688,34 +711,101 @@ body {
   flex-direction: column;
 }
 
-.item-group-icon {
-  display: block;
+.virtual-reality-link {
+  position: relative;
 }
 
-.icon-background {
-  padding: 52px 32px 52px 31px;
+.item-group-link::before {
+  content: "";
+  width: 160px;
+  height: 160px;
   background-color: #FFE17F;
-  margin-bottom: 32px;
 }
 
-.item-group:nth-child(2) .icon-background {
-  padding: 43px 37px 0 37px;
+.virtual-reality-link::after {
+  content: "";
+  background-image: url(../images/product-group-icon-1.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 53px;
+  left: 32px;
 }
 
-.item-group:nth-child(3) .icon-background {
-  padding: 36px 45px 37px 44px;
+.mono-pod-link {
+  position: relative;
 }
 
-.item-group:nth-child(4) .icon-background {
-  padding: 47px 27px 48px 26px;
+.mono-pod-link::after {
+  content: "";
+  background-image: url(../images/product-group-icon-2.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 44px;
+  left: 37px;
 }
 
-.item-group:nth-child(5) .icon-background {
-  padding: 31px 52px;
+.camera-link {
+  position: relative;
 }
 
-.item-group:last-child .icon-background {
-  padding: 45px 14px;
+.camera-link::after {
+  content: "";
+  background-image: url(../images/product-group-icon-3.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 36px;
+  left: 44px;
+}
+
+.sport-watch-link {
+  position: relative;
+}
+
+.sport-watch-link::after {
+  content: "";
+  background-image: url(../images/product-group-icon-4.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 47px;
+  left: 26px;
+}
+
+.smart-watch-link {
+  position: relative;
+}
+
+.smart-watch-link::after {
+  content: "";
+  background-image: url(../images/product-group-icon-5.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 31px;
+  left: 52px;
+}
+
+.drone-link {
+  position: relative;
+}
+
+.drone-link::after {
+  content: "";
+  background-image: url(../images/product-group-icon-6.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 45px;
+  left: 14px;
 }
 
 .special-delivery-description {
