@@ -95,52 +95,11 @@ body {
 
 .navigation-login {
   margin: 0;
-  margin-right: 198px;
+  margin-right: 172px;
 }
 
-.login-link {
-  position: relative;
-}
-
-.login-link::before {
-  position: absolute;
-  content: "";
-  background-image: url(../images/user-icon.svg);
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  top: 6px;
-  right: 26px;
-}
-
-.compare-link {
-  position: relative;
-}
-
-.compare-link::before {
-  position: absolute;
-  content: "";
-  background-image: url(../images/compare-icon.svg);
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  top: 5px;
-  right: 22px;
-}
-
-.cart-link {
-  position: relative;
-}
-
-.cart-link::before {
-  position: absolute;
-  content: "";
-  background-image: url(../images/shopping-cart-icon.svg);
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  top: 3px;
-  right: 24px;
+.navigation-link-logo {
+  margin-righT: 10px;
 }
 
 .navigation-wrapper {
@@ -237,20 +196,29 @@ body {
   list-style: none;
 }
 
+.navigation-list-catalog {
+  gap: 28px;
+}
+
 .navigation-list-index {
-  gap: 61px;
+  gap: 32px;
 }
 
-.navigation-item-catalog:first-child {
-  margin-right: 28px;
+.navigation-link:hover {
+  opacity: 0.6;
 }
 
-.navigation-item-catalog:nth-child(2) {
-  margin-right: 48px;
+.navigation-link:active {
+  opacity: 0.3;
 }
 
-.navigation-item-catalog:nth-child(3) {
-  margin-right: 61px;
+.navigation-link:focus {
+  outline: 2px solid #AF4FFF;
+  box-sizing: border-box;
+}
+
+.logout-link {
+  opacity: 0.3;
 }
 
 .navigation-catalog {
@@ -368,17 +336,26 @@ body {
 
 .search-form {
   display: flex;
-  margin-right: 50px;
+  margin-right: 22px;
   position: relative;
 }
 
 .navigation-input {
+  font-family: "Rubik";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
   width: 359px;
   padding: 10px 0 10px 48px;
   border: 2px solid #000000;
   border-radius: 50px 0 0 50px;
   box-sizing: border-box;
   background-color: transparent;
+}
+
+.navigation-input:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .search-form::before {
@@ -398,7 +375,7 @@ body {
   line-height: 30px;
 }
 
-.subsription-input {
+.subscription-input {
   width: 557px;
   border: none;
   border-bottom: 3px solid #C4C4C4;;
@@ -592,13 +569,13 @@ body {
   margin-bottom: 152px;
 }
 
-.subsription-form-wrapper {
+.subscription-form-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.subsription-form {
+.subscription-form {
   width: 810px;
   display: flex;
 }
