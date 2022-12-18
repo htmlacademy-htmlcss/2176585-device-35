@@ -13,7 +13,7 @@
             <img class="logo-image" src="images/header-logo.svg" width="145" height="36" alt="Логотип магазина Девайс.">
           </a>
           <form class="search-form" method="get" action="https://echo.htmlacademy.ru/">
-            <label class="visually-hidden" for="search">Поиск</label>
+            <label class="visually-hidden search-label" for="search">Поиск</label>
             <input class="navigation-input small-text" type="search" name="search" id="search" placeholder="Поиск по сайту">
             <button class="search-btn small-text" type="submit">Найти</button>
           </form>
@@ -32,19 +32,48 @@
                 </a>
               </li>
               <li class="navigation-item">
-                <a class="navigation-link cart-link link-text" href="#">
+                <a class="navigation-link cart-link favorites-count link-text" href="#">
                   <svg class="navigation-link-logo" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none"><g clip-path="url(#a)"><path fill="#000" d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2 0-.5.1-.6.3L4.2 5.2H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs></svg>
                   <span>Корзина</span>
                 </a>
+                <div class="popover popover-cart">
+                  <div class="popover-content">
+                    <ul class="cart-items-list">
+                      <li class="cart-item">
+                        <button class="popover-close-btn" type="button">
+                          <span class="visually-hidden">Удалить из корзины</span>
+                        </button>
+                        <a class="cart-item-link" href="">
+                          <img class="cart-image" src="images/product-photo-1.jpg" width="39" height="43" alt="Изображение товара в корзине.">
+                          <p class="cart-item-title cart-text">Любительская селфи-палка</p>
+                        </a>
+                      </li>
+                      <li class="cart-item">
+                        <button class="popover-close-btn" type="button">
+                          <span class="visually-hidden">Удалить из корзины</span>
+                        </button>
+                        <a class="cart-item-link" href="">
+                          <img class="cart-image" src="images/product-photo-2.jpg" width="39" height="43" alt="Изображение товара в корзине.">
+                          <p class="cart-item-title cart-text">Профессиональная селфи-палка</p>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="cart-total">
+                      <p class="items-count cart-text">Товаров: 2</p>
+                      <p class="total-cost cart-text">Сумма: 2000 ₽</p>
+                    </div>
+                    <button class="cart-open-btn cart-text" type="button">Открыть корзину</button>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
         </nav>
           <nav class="navigation-catalog">
             <div class="navigation-catalog-wrapper">
-              <p class="navigation-catalog-title navigation-text">Каталог товаров</p>
-              <button class="catalog-open-btn" type="button">
-                <span class="visually-hidden">Раскрыть список</span>
+              <button class="catalog-open" type="button">
+                <span class="navigation-catalog-title navigation-text">Каталог товаров</span>
+                <span class="catalog-open-btn"></span>
               </button>
               <ul class="catalog-items-list">
                 <li class="catalog-item">
@@ -155,6 +184,31 @@
               </div>
             </li>
           </ul>
+          <div class="slider-controls">
+            <button class="slider-button slider-prev" type="button">
+              <span class="visually-hidden">Предыдущий товар</span>
+            </button>
+            <button class="slider-button slider-next" type="button">
+              <span class="visually-hidden">Следующий товар</span>
+            </button>
+          </div>
+          <ol class="slider-pagination">
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                <span class="visually-hidden">Квадрокоптер</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button" type="button">
+                <span class="visually-hidden">Фитнес-браслет</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button" type="button">
+                <span class="visually-hidden">Селфи-палка</span>
+              </button>
+            </li>
+          </ol>
         </section>
         <section class="item-groups-container">
           <h2 class="visually-hidden">Группы товаров</h2>
@@ -166,7 +220,7 @@
             </li>
             <li class="item-group">
               <a class="item-group-link mono-pod-link link-text" href="#">
-                <p class="item-group-name">Моноподы для селфи</p>
+                <p class="item-group-name">Моноподы <br> для селфи</p>
               </a>
             </li>
             <li class="item-group">
@@ -192,9 +246,9 @@
         <section class="services-container">
             <h2 class="visually-hidden">Дополнительные услуги</h2>
             <div class="services-navigation">
-              <button class="services-btn services-btn-checked dnavigation-text" type="button">Доставка</button>
-              <button class="services-btn services-btn-not-checked navigation-text" type="button">Гарантия</button>
-              <button class="services-btn services-btn-not-checked navigation-text" type="button">Кредит</button>
+              <button class="services-btn services-btn-current more-details-link navigation-text" type="button">Доставка</button>
+              <button class="services-btn more-details-link navigation-text" type="button">Гарантия</button>
+              <button class="services-btn more-details-link navigation-text" type="button">Кредит</button>
             </div>
             <div class="services-description">
               <p class="services-title title-text">Доставка</p>
@@ -235,7 +289,7 @@
               <li class="delivery-type">СДИК</li>
               <li class="delivery-type">ТоксБерри</li>
             </ul>
-            <a class=" more-details-link company-info-link navigation-text link-text" href="#">Подробнее о нас</a>
+            <a class="more-details-link company-info-link navigation-text link-text" href="#">Подробнее о нас</a>
           </section>
           <section class="company-info-container">
             <h2 class="company-info-title title-text">Контакты</h2>
@@ -279,7 +333,7 @@
     <footer class="page-footer">
      <div class="page-footer-container">
         <a class="footer-logo-link" href="#">
-          <svg class="footer-logo" xmlns="http://www.w3.org/2000/svg" width="145" height="36" fill="none"><path fill="#FFC700" d="M27.219 0v35.3h-7.606v-2.4c-1.7 1.9-4.102 3.1-7.505 3.1C5.504 36 0 30.2 0 22.7 0 15.2 5.504 9.4 12.108 9.4c3.403 0 5.904 1.2 7.505 3.1V0h7.606Zm-7.606 22.7c0-3.8-2.501-6.2-6.004-6.2-3.502 0-6.004 2.4-6.004 6.2 0 3.8 2.502 6.2 6.004 6.2 3.503-.1 6.004-2.4 6.004-6.2ZM43.73 29.2c2.102 0 3.803-.8 4.803-1.9l6.105 3.5C52.136 34.2 48.433 36 43.63 36c-8.606 0-14.01-5.8-14.01-13.3 0-7.5 5.404-13.3 13.41-13.3 7.405 0 12.809 5.7 12.809 13.3 0 1.1-.1 2.1-.3 3H37.625c1 2.6 3.302 3.5 6.104 3.5Zm4.603-9.1c-.8-2.9-3.102-4-5.403-4-2.902 0-4.804 1.4-5.504 4h10.907ZM82.156 10.1 72.85 35.3h-8.606l-9.306-25.2h8.405l5.304 16 5.304-16h8.205ZM83.457 10.1h7.606v25.2h-7.606V10.1ZM93.665 22.7c0-7.5 5.703-13.3 13.409-13.3 4.903 0 9.206 2.6 11.408 6.5l-6.605 3.8c-.901-1.8-2.702-2.8-4.903-2.8-3.303 0-5.704 2.4-5.704 5.8 0 3.5 2.401 5.8 5.704 5.8 2.201 0 4.103-1.1 4.903-2.8l6.605 3.8c-2.102 3.9-6.405 6.5-11.408 6.5-7.706 0-13.41-5.8-13.41-13.3ZM132.892 29.2c2.101 0 3.802-.8 4.803-1.9l6.104 3.5c-2.502 3.4-6.204 5.2-11.007 5.2-8.606 0-14.01-5.8-14.01-13.3 0-7.5 5.504-13.3 13.409-13.3C139.596 9.4 145 15.1 145 22.7c0 1.1-.1 2.1-.3 3h-17.913c1.001 2.6 3.303 3.5 6.105 3.5Zm4.703-9.1c-.801-2.9-3.102-4-5.404-4-2.902 0-4.803 1.4-5.504 4h10.908ZM83.457 0v10.1L91.063 0h-7.606Z"/></svg>
+          <img class="footer-logo" src="images/footer-logo.svg" width="145" height="36" alt="Логотип магазина Девайс.">
         </a>
         <div class="footer-text-wrapper">
           <p class="footer-address small-text">

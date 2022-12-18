@@ -33,52 +33,81 @@
               </a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link cart-link link-text" href="#">
+              <a class="navigation-link cart-link favorites-count link-text" href="#">
                 <svg class="navigation-link-logo" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none"><g clip-path="url(#a)"><path fill="#000" d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2 0-.5.1-.6.3L4.2 5.2H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs></svg>
                 <span>Корзина</span>
               </a>
+              <div class="popover popover-cart">
+                <div class="popover-content">
+                  <ul class="cart-items-list">
+                    <li class="cart-item">
+                      <button class="popover-close-btn" type="button">
+                        <span class="visually-hidden">Удалить из корзины</span>
+                      </button>
+                      <a class="cart-item-link" href="">
+                        <img class="cart-image" src="images/product-photo-1.jpg" width="39" height="43" alt="Изображение товара в корзине.">
+                        <p class="cart-item-title cart-text">Любительская селфи-палка</p>
+                      </a>
+                    </li>
+                    <li class="cart-item">
+                      <button class="popover-close-btn" type="button">
+                        <span class="visually-hidden">Удалить из корзины</span>
+                      </button>
+                      <a class="cart-item-link" href="">
+                        <img class="cart-image" src="images/product-photo-2.jpg" width="39" height="43" alt="Изображение товара в корзине.">
+                        <p class="cart-item-title cart-text">Профессиональная селфи-палка</p>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="cart-total">
+                    <p class="items-count cart-text">Товаров: 2</p>
+                    <p class="total-cost cart-text">Сумма: 2000 ₽</p>
+                  </div>
+                  <button class="cart-open-btn cart-text" type="button">Открыть корзину</button>
+                </div>
+              </div>
             </li>
           </ul>
         </nav>
-          <nav class="navigation-catalog">
-            <div class="navigation-catalog-wrapper">
-              <p class="navigation-catalog-title navigation-text">Каталог товаров</p>
-              <button class="catalog-open-btn" type="button">
-                <span class="visually-hidden">Раскрыть список</span>
-              </button>
-              <ul class="catalog-items-list">
-                <li class="catalog-item">
-                  <a class="catalog-item-link link-text" href="#">Виртуальная реальность</a>
-                </li>
-                <li class="catalog-item">
-                  <a class="catalog-item-link link-text" href="#"> Мноподы для селфи</a>
-                </li>
-                <li class="catalog-item">
-                  <a class="catalog-item-link link-text" href="#">Экшн-камеры</a>
-                </li>
-                <li class="catalog-item">
-                  <a class="catalog-item-link link-text" href="#">Фитнес-браслеты</a>
-                </li>
-                <li class="catalog-item">
-                  <a class="catalog-item-link link-text" href="#">Умные часы</a>
-                </li>
-                <li class="catalog-item">
-                  <a class="catalog-item-link link-text" href="#">Квадрокоптеры</a>
-                </li>
-              </ul>
-            </div>
-            <ul class="navigation-services-list">
-              <li class="navigation-services-item">
-                <a class="navigation-services-link navigation-text link-text" href="#">Доставка</a>
+        <nav class="navigation-catalog">
+          <div class="navigation-catalog-wrapper">
+            <button class="catalog-open" type="button">
+              <span class="navigation-catalog-title navigation-text">Каталог товаров</span>
+              <span class="catalog-open-btn"></span>
+            </button>
+            <ul class="catalog-items-list">
+              <li class="catalog-item">
+                <a class="catalog-item-link link-text" href="#">Виртуальная реальность</a>
               </li>
-              <li class="navigation-services-item">
-                <a class="navigation-services-link navigation-text link-text" href="#">Гарантия</a>
+              <li class="catalog-item">
+                <a class="catalog-item-link link-text" href="#"> Мноподы для селфи</a>
               </li>
-              <li class="navigation-services-item">
-                <a class="navigation-services-link navigation-text link-text" href="#">Контакты</a>
+              <li class="catalog-item">
+                <a class="catalog-item-link link-text" href="#">Экшн-камеры</a>
+              </li>
+              <li class="catalog-item">
+                <a class="catalog-item-link link-text" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="catalog-item">
+                <a class="catalog-item-link link-text" href="#">Умные часы</a>
+              </li>
+              <li class="catalog-item">
+                <a class="catalog-item-link link-text" href="#">Квадрокоптеры</a>
               </li>
             </ul>
-          </nav>
+          </div>
+          <ul class="navigation-services-list">
+            <li class="navigation-services-item">
+              <a class="navigation-services-link navigation-text link-text" href="#">Доставка</a>
+            </li>
+            <li class="navigation-services-item">
+              <a class="navigation-services-link navigation-text link-text" href="#">Гарантия</a>
+            </li>
+            <li class="navigation-services-item">
+              <a class="navigation-services-link navigation-text link-text" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
@@ -179,7 +208,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <button class="more-btn filter-btn navigation-text" type="submit">Показать</button>
+              <button class="more-details-link filter-btn navigation-text" type="submit">Показать</button>
             </form>
           </div>
           <div class="catalog-right-column">
