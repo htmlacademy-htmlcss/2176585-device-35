@@ -1833,7 +1833,7 @@ body {
 .control-input[type="radio"]:checked + .control-mark::before {
   position: absolute;
   top: 2.5px;
-  left: 2.5px;
+  left: 3px;
   width: 10px;
   height: 10px;
   background-color: #000000;
