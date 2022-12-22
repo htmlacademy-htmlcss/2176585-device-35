@@ -123,10 +123,11 @@ body {
 
 .favorites-count {
   position: relative;
+  padding-left: 10px;
 }
 
 .favorites-count::before {
-  content: "2";
+  content: attr(data-counter);
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -137,7 +138,7 @@ body {
   min-width: 21px;
   height: 21px;
   top: 0;
-  left: -14px;
+  right: calc(100% - 16px);
   background: #ffffff;
   border-radius: 50px;
 }
@@ -148,7 +149,7 @@ body {
 
 .popover {
   position: absolute;
-  top: 30px;
+  top: 35px;
   right: -75px;
   z-index: 3;
   box-sizing: border-box;
@@ -289,8 +290,7 @@ body {
   outline-offset: 2px;
 }
 
-.cart-link:hover + .popover,
-.cart-link:focus + .popover {
+.cart-link:focus-within + .popover {
   display: block;
 }
 
@@ -403,7 +403,7 @@ body {
 }
 
 .navigation-list-index {
-  gap: 32px;
+  gap: 22px;
 }
 
 .navigation-link:hover {
@@ -624,6 +624,23 @@ body {
 }
 
 .navigation-input:focus {
+  outline: none;
+}
+
+.search-form-wrapper {
+  position: relative;
+}
+
+.navigation-input-border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.navigation-input:focus + .navigation-input-border {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
@@ -764,43 +781,27 @@ body {
   font-size: 16px;
   line-height: 18px;
   list-style: none;
-  display: none;
   position: absolute;
-  top: 33px;
+  top: 35px;
   left: -60px;
   box-sizing: border-box;
   width: 1160px;
   min-height: 170px;
   margin: 0;
   background-color: #ffe17f;
-  padding: 33px 0 0 60px;
+  padding: 33px 0 27px 60px;
   z-index: 1;
-}
-
-.catalog-open:hover + .catalog-items-list,
-.catalog-open:focus + .catalog-items-list {
-  display: grid;
   grid-template-columns: 222px 211px 181px;
-  column-gap: 10px 30px;
-  z-index: 1;
-}
-
-.catalog-open:hover .catalog-open-btn::before {
+  gap: 10px 30px;
   display: none;
 }
 
-.catalog-items-list:hover,
-.catalog-items-list:focus {
+.navigation-catalog-wrapper:focus-within .catalog-items-list {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-flow: column;
-  grid-gap: 10px;
-  z-index: 1;
 }
 
-.catalog-item {
-  margin-bottom: 20px;
+.catalog-open:focus-within .catalog-open-btn::before {
+  display: none;
 }
 
 .catalog-item-link {
@@ -818,6 +819,10 @@ body {
 .catalog-item-link:focus {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
+}
+
+.catalog-item:last-child {
+  grid-column-start: 1;
 }
 
 .navigation-services-link:hover {
