@@ -96,6 +96,24 @@ body {
   opacity: 0.3;
 }
 
+.made-in-logo {
+  fill: #ffc700;
+}
+
+.made-in-logo:hover {
+  fill:#ffffff;
+}
+
+.made-in-logo:active {
+  fill:#ffffff;
+  opacity: 0.3;
+}
+
+.made-in-link:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
 .navigation {
   position: relative;
   display: flex;
@@ -312,7 +330,8 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  column-gap: 45px;
+  -moz-column-gap: 45px;
+       column-gap: 45px;
   letter-spacing: 0.2em;
   max-width: 500px;
 }
@@ -337,7 +356,8 @@ body {
   list-style: none;
   display: flex;
   width: 444px;
-  column-gap: 35px;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
   margin: 0;
   padding: 0;
   margin-right: 183px;
@@ -348,10 +368,13 @@ body {
 }
 
 .footer-services-link:hover {
-  opacity: 0.6;
+  color: #ffc700;
+  border-bottom: 2px solid #ffc700;
 }
 
 .footer-services-link:active {
+  color: #ffc700;
+  border-bottom: 2px solid #ffc700;
   opacity: 0.3;
 }
 
@@ -378,7 +401,8 @@ body {
 .footer-social-list {
   list-style: none;
   display: flex;
-  column-gap: 15px;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
   margin: 0;
   padding: 0;
   margin-right: 390px;
@@ -402,6 +426,10 @@ body {
   position: absolute;
   top: 11px;
   left: 12px;
+}
+
+.footer-social-link:focus {
+  outline: none;
 }
 
 .navigation-list {
@@ -941,7 +969,8 @@ body {
   margin: 0 auto;
   padding: 0;
   margin-bottom: 70px;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
   list-style: none;
 }
 
@@ -1378,10 +1407,11 @@ body {
 }
 
 .contact-number-link:hover {
-  opacity: 0.6;
+  color: #ffc700;
 }
 
 .contact-number-link:active {
+  color: #ffc700;
   opacity: 0.3;
 }
 
@@ -1431,7 +1461,8 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
-  column-gap: 36px;
+  -moz-column-gap: 36px;
+       column-gap: 36px;
 }
 
 .range-scale {
@@ -1647,7 +1678,8 @@ body {
   margin: 0;
   list-style: none;
   padding-top: 70px;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
   row-gap: 40px;
   padding-bottom: 40px;
 }
@@ -2028,13 +2060,15 @@ body {
 
 .auth-form-wrapper {
   display: flex;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
   margin-bottom: 42px;
 }
 
 .delivery-item-input {
   display: flex;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
 }
 
 .modal-input-wrapper {
