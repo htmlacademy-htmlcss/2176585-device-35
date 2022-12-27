@@ -275,7 +275,7 @@
         </section>
         <section class="special-delivery">
           <h2 class="visually-hidden">Спецпредложение</h2>
-          <a class="special-delivery-link special-delivery-logo link-text" href="modal.html">
+          <a class="special-delivery-link special-delivery-logo link-text" href="#">
             <span class="special-delivery-icon"></span>
             <p class="special-delivery-description">Доставим редкий товар под заказ</p>
           </a>
@@ -383,5 +383,47 @@
         </div>
      </div>
     </footer>
+
+    <div class="modal-container">
+      <div class="modal modal-delivery">
+        <a class="modal-close-button" href="index.html">
+          <span class="visually-hidden">Закрыть</span>
+        </a>
+        <section class="modal-content">
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="auth-form-wrapper">
+              <div class="modal-input-wrapper">
+                <label class="modal-input-title name-input" for="auth-name">Ваше имя:</label>
+                <input class="auth-form-field login-field" type="text" id="auth-name" name="auth-name" placeholder="Введите имя">
+              </div>
+              <div class="modal-input-wrapper">
+                <label class="modal-input-title email-input" for="auth-email">Ваш e-mail:</label>
+                <input class="auth-form-field login-field" type="email" id="auth-email" name="auth-email" placeholder="Введите e-mail">
+              </div>
+            </div>
+            <div class="auth-form-wrapper">
+              <div class="modal-input-wrapper" >
+                <label class="modal-input-title" for="item-description">Что нужно привезти:</label>
+                <input class="auth-form-field description-field" type="text" id="item-description" name="item-description"
+                  placeholder="В свободной форме">
+              </div>
+              <div class="quantity-input">
+                <label class="modal-input-title quantity-input-title" for="auth-items-quantity">Количество:</label>
+                <div class="quantity-btn-wrapper">
+                  <button class="quantity-minus quantity-btn" type="button">
+                    <span class="visually-hidden">Убавить</span>
+                  </button><input class="auth-form-field quantity-field" type="number" id="auth-items-quantity"
+                    name="auth-items-quantity" value="1"><button class="quantity-plus quantity-btn" type="button">
+                    <span class="visually-hidden">Добавить</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="more-details-link modal-button" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
