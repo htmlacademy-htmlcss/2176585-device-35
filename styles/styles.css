@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
   src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
@@ -1249,7 +1249,7 @@ body {
   position: absolute;
   background-image: url("../images/warranty-icon.svg");
   background-repeat: no-repeat;
-  width: 100%;
+  width: 171px;
   height: 100%;
   top: 2px;
   left: 558px;
@@ -1260,7 +1260,7 @@ body {
   position: absolute;
   background-image: url("../images/credit-icon.svg");
   background-repeat: no-repeat;
-  width: 100%;
+  width: 156px;
   height: 100%;
   top: 2px;
   left: 558px;
@@ -1285,10 +1285,11 @@ body {
   width: 694px;
   position: relative;
   top: -2px;
+  display: none;
 }
 
-.services-not-checked {
-  display: none;
+.services-checked {
+  display: flex;
 }
 
 .services-description-text {
