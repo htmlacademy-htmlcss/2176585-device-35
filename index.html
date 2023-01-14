@@ -19,7 +19,7 @@
             <div class="search-form-wrapper">
               <label class="visually-hidden search-label" for="search">Поиск</label>
               <input class="navigation-input small-text" type="search" name="search" id="search"
-                placeholder="Поиск по сайту">
+                placeholder="Поиск по сайту" required>
               <span class="navigation-input-border"></span>
             </div>
             <button class="search-btn small-text" type="submit">Найти</button>
@@ -361,7 +361,7 @@
               <form class="subscription-form" method="post" action="https://echo.htmlacademy.ru/">
                 <label class="visually-hidden" for="newsletter-email">Email</label>
                 <input class="navigation-input mail-input subscription-input" type="email" name="newsletter-email"
-                  id="newsletter-email" placeholder="Ваш e-mail">
+                  id="newsletter-email" placeholder="Ваш e-mail" required>
                 <button class="submit-btn navigation-text" type="submit">Подписаться</button>
               </form>
               <span class="subscribe-notice description-text">Это бесплатно</span>
@@ -423,6 +423,56 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal-container modal-index">
+      <div class="modal modal-delivery">
+        <button class="modal-close-button" href="index.html">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="auth-form-wrapper email-wrapper">
+              <div class="modal-input-wrapper">
+                <label class="modal-input-title name-input" for="auth-name">Ваше имя:</label>
+                <input class="auth-form-field login-field" type="text" id="auth-name" name="auth-name"
+                  placeholder="Введите имя">
+              </div>
+              <div class="modal-input-wrapper">
+                <label class="modal-input-title email-input" for="auth-email">Ваш e-mail:</label>
+                <input class="auth-form-field login-field email-field" type="email" id="auth-email" name="auth-email"
+                  placeholder="Введите e-mail">
+                <span class="email-error">Забавный у вас адрес</span>
+              </div>
+            </div>
+            <div class="auth-form-wrapper">
+              <div class="modal-input-wrapper">
+                <label class="modal-input-title" for="item-description">Что нужно привезти:</label>
+                <input class="auth-form-field description-field" type="text" id="item-description"
+                  name="item-description" placeholder="В свободной форме">
+              </div>
+              <div class="quantity-input">
+                <label class="modal-input-title quantity-input-title" for="auth-items-quantity">Количество:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button"></button>
+                  <span class="tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
+                    к провозу багажа.</span>
+                </span>
+                <div class="quantity-btn-wrapper">
+                  <button class="quantity-minus quantity-btn" type="button">
+                    <span class="visually-hidden">Убавить</span>
+                  </button><input class="auth-form-field quantity-field" type="number" id="auth-items-quantity"
+                    name="auth-items-quantity" value="1"><button class="quantity-plus quantity-btn" type="button">
+                    <span class="visually-hidden">Добавить</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="more-details-link modal-button" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 
 </html>

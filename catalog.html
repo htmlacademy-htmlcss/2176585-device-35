@@ -23,7 +23,7 @@
             <div class="search-form-wrapper">
               <label class="visually-hidden search-label" for="search">Поиск</label>
               <input class="navigation-input small-text" type="search" name="search" id="search"
-                placeholder="Поиск по сайту">
+                placeholder="Поиск по сайту" required>
               <span class="navigation-input-border"></span>
             </div>
             <button class="search-btn small-text" type="submit">Найти</button>
@@ -41,7 +41,7 @@
             <li class="navigation-item navigation-item-catalog">
               <a class="navigation-link logout-link link-text" href="#">Выйти</a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item navigation-item-catalog">
               <a class="navigation-link compare-link link-text" href="#">
                 <svg class="navigation-link-logo" xmlns="http://www.w3.org/2000/svg" width="10" height="12" fill="none">
                   <path fill="#000" d="M6 0H4v12h2V0ZM2 4H0v8h2V4ZM10 3H8v9h2V3Z" />
@@ -150,7 +150,7 @@
                 <a class="breadcrumbs-link small-text link-text" href="index.html">Главная</a>
               </li>
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link small-text link-text" href="#">Каталог</a>
+                <a class="breadcrumbs-link small-text link-text" href="#">Каталог товаров</a>
               </li>
               <li class="breadcrumbs-item">
                 <span class="breadcrumbs-link small-text link-text">Моноподы для селфи</span>
@@ -163,7 +163,7 @@
             <h2 class="filter-title filter-title-text">Фильтр:</h2>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title catalog-title-text">Стоимость</legend>
+                <legend class="catalog-filter-title range-title catalog-title-text">Стоимость</legend>
                 <div class="range">
                   <div class="range-scale">
                     <div class="range-bar">
@@ -272,7 +272,7 @@
                     <img class="product-card-image" src="images/product-photo-1.jpg" width="360" height="380"
                       alt="Любительская селфи-палка.">
                     <div class="product-card-description">
-                      <h3 class="product-name catalog-title-text">Любительская селфи-палка</h3>
+                      <h3 class="product-name catalog-title-text">Любительская <br> селфи-палка</h3>
                       <span class="product-price">500 ₽</span>
                     </div>
                   </a>
@@ -298,7 +298,7 @@
                     <img class="product-card-image" src="images/product-photo-3.jpg" width="360" height="380"
                       alt="Непотопляемая селфи-палка.">
                     <div class="product-card-description">
-                      <h3 class="product-name catalog-title-text">Непотопляемая селфи-палка</h3>
+                      <h3 class="product-name catalog-title-text">Непотопляемая <br> селфи-палка</h3>
                       <span class="product-price">2 500 ₽</span>
                     </div>
                   </a>
@@ -311,7 +311,7 @@
                     <img class="product-card-image" src="images/product-photo-4.jpg" width="360" height="380"
                       alt="Селфи-палка «Следуй за мной».">
                     <div class="product-card-description">
-                      <h3 class="product-name catalog-title-text">Селфи-палка «Следуй за мной»</h3>
+                      <h3 class="product-name catalog-title-text">Селфи-палка «Следуй <br> за мной»</h3>
                       <span class="product-price">1 500 ₽</span>
                     </div>
                   </a>
